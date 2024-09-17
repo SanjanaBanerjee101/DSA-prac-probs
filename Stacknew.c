@@ -10,8 +10,7 @@ void push(int item){
 		printf("Stack Overflow\n");
 		return ;
 	}
-	top++;
-	stack[top]=item;
+	stack[top++]=item;
 }
 
 void pop(int item){
