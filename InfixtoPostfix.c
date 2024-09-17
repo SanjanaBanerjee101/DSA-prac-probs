@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Function to return precedence of operators
+// Function for returning precedence of operators
 int prec(char c) {
     if (c == '^')
         return 3;
