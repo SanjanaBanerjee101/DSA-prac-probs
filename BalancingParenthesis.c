@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
-#define MAX 100
+#define MAX 50
 
 // Stack structure definition
 typedef struct {
