@@ -41,7 +41,44 @@ int prec(char symbol){
 }
 
 
-
+void infix_to_postfix(){
+	int i,p=0;
+	char next;
+	
+	for(i=0; infix[i]!='\0'; i++){
+		
+		switch(infix[i]){
+			
+			case '+':
+			case '-':
+			case '*':
+			case '/':
+			case '%':
+			case '^':
+				while(top!=-1 && prec(infix[i])<=prec(stack[top]))
+						postfix[p++]=pop();
+				push(infix[i]);
+				break;
+				
+			case '(':
+				push(infix[i]);
+				break;
+				
+			case ')':
+				while((next=pop())!='(')
+					postfix[p++]=next;
+					break;
+			
+			default:
+				postfix[p++]=infix[i];
+				
+		}
+	}
+	while(top!=-1)
+		postfix[p++]=pop();
+		
+	postfix[p]='\0';
+}
 
 
 
