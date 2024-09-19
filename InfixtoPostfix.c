@@ -15,6 +15,14 @@ void push(char item){
 	stack[++top]=item;
 }
 
+char pop(){
+	if(top==-1){
+		printf("Stack Underflow");
+		return ;
+	}
+	return stack[top--];
+}
+
 
 
 
