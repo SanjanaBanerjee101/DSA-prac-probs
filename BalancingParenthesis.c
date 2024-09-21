@@ -32,6 +32,9 @@ char pop(Stack *s) {
 }
 
 // Peek top element of stack
+char peek(Stack *s) {
+    return s->arr[s->top];
+}
 
 // Check if brackets are balanced
 bool isparen(const char *s) {
