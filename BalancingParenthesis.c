@@ -32,12 +32,9 @@ char pop(Stack *s) {
 }
 
 // Peek top element of stack
-char peek(Stack *s) {
-    return s->arr[s->top];
-}
 
 // Check if brackets are balanced
-bool ispar(const char *s) {
+bool isparen(const char *s) {
     Stack stk;
     init(&stk);
 
@@ -66,7 +63,7 @@ int main() {
     const char *s = "{()}[]";
 
     // Function call to check for balanced brackets
-    if (ispar(s)) {
+    if (isparen(s)) {
         printf("true\n");
     } else {
         printf("false\n");
