@@ -46,32 +46,22 @@ int push(int data){
 
 
 
+/* Main function */
 int main(){
-	
-	do{
-		printf("\n*******Stack Operations********");
-		printf("\n1.PUSH");
-		printf("\n2.POP");
-		printf("\n3.DISPLAY");
-		printf("\n4.EXIT ");
-		
-		scanf("%d",&n);
-		
-		switch(n){
-			case 1 :
-				printf("Enter the item u want to push : ");
-				scanf("%d",&item);
-				push(item);
-				break;
-			case 2:
-				pop(item);
-				break;
-			case 3:
-				display();
-				break;
-			case 4:
-				exit(0);
-		}
-	}while(1);
-	return 0;
+   push(44);
+   push(10);
+   push(62);
+   push(123);
+   push(15);
+   printf("Element at top of the stack: %d\n" ,peek());
+   printf("Elements: \n");
+
+   // print stack data
+   while(!isempty()) {
+      int data = pop();
+      printf("%d\n",data);
+   }
+   printf("Stack full: %s\n" , isfull()?"true":"false");
+   printf("Stack empty: %s\n" , isempty()?"true":"false");
+   return 0;
 }
