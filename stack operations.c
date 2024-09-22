@@ -1,6 +1,7 @@
-#include<stdio.h>
-#include<stdlib.h>
-#define Max 5
+#include <stdio.h>
+int MAXSIZE = 8;
+int stack[8];
+int top = -1;
 
 	int stack[Max];
 	int top=-1,n,item;
