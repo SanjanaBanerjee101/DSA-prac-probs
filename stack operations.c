@@ -3,15 +3,12 @@ int MAXSIZE = 8;
 int stack[8];
 int top = -1;
 
-	int stack[Max];
-	int top=-1,n,item;
-
-void push(int item){
-	if(top==Max-1){
-		printf("Stack Overflow\n");
-		return ;
-	}
-	stack[top++]=item;
+	/* Check if the stack is empty */
+int isempty(){
+   if(top == -1)
+      return 1;
+   else
+      return 0;
 }
 
 void pop(int item){
