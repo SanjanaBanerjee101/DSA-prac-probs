@@ -33,15 +33,16 @@ int pop(){
       printf("Could not retrieve data, Stack is empty.\n");
    }
 }
-void display(){
-	if(top==-1){
-		printf("Stack is Empty\n");
-		return;
-	}
-	for(int i=0; i<=top; i++){
-		printf("%d\t",stack[i]);
-	}
+/* Function to insert into the stack */
+int push(int data){
+   if(!isfull()) {
+      top = top + 1;
+      stack[top] = data;
+   } else {
+      printf("Could not insert data, Stack is full.\n");
+   }
 }
+
 
 
 
