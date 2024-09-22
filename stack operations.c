@@ -1,4 +1,4 @@
-//stack program using static input
+//stack program implementation using static input
 
 #include <stdio.h>
 int MAXSIZE = 8;
