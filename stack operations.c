@@ -22,6 +22,17 @@ int peek(){
    return stack[top];
 }
 
+/* Function to delete from the stack */
+int pop(){
+   int data;
+   if(!isempty()) {
+      data = stack[top];
+      top = top - 1;
+      return data;
+   } else {
+      printf("Could not retrieve data, Stack is empty.\n");
+   }
+}
 void display(){
 	if(top==-1){
 		printf("Stack is Empty\n");
