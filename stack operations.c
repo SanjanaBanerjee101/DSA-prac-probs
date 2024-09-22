@@ -10,15 +10,12 @@ int isempty(){
    else
       return 0;
 }
-
-void pop(int item){
-	if(top==-1){
-		printf("Stack Underflow\n");
-		return;
-	}
-	item=stack[top];
-	top--;
-	printf("\nDeleted item is %d",item);
+/* Check if the stack is full */
+int isfull(){
+   if(top == MAXSIZE)
+      return 1;
+   else
+      return 0;
 }
 
 void display(){
