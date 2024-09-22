@@ -17,6 +17,10 @@ int isfull(){
    else
       return 0;
 }
+/* Function to return the topmost element in the stack */
+int peek(){
+   return stack[top];
+}
 
 void display(){
 	if(top==-1){
