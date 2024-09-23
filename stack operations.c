@@ -47,12 +47,11 @@ int push(int data){
 
 
 
-
 /* Main function */
 int main(){
-   push(44);
+   push(0);
    push(10);
-   push(62);
+   push(20);
    push(123);
    push(15);
    printf("Element at top of the stack: %d\n" ,peek());
@@ -63,7 +62,10 @@ int main(){
       int data = pop();
       printf("%d\n",data);
    }
-   printf("Stack full: %s\n" , isfull()?"true":"false");
-   printf("Stack empty: %s\n" , isempty()?"true":"false");
-   return 0;
+  if(isempty()){
+	  printf("true");
+  }
+  else
+	  printf("false");
+  return 0;
 }
