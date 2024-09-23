@@ -67,5 +67,6 @@ int main(){
   }
   else
 	  printf("false");
+  printf("Stack full: %s\n" , isfull()?"true":"false");
   return 0;
 }
