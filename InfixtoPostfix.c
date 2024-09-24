@@ -15,7 +15,7 @@ void push(char item){
 	}
 	stack[++top]=item;
 }
-
+//to delete an item from the stack
 char pop(){
 	if(top==-1){
 		printf("Stack Underflow");
@@ -23,7 +23,7 @@ char pop(){
 	}
 	return stack[top--];
 }
-
+//precedence order to followed by the operators in stack while pushing
 int prec(char symbol){
 	
 	switch(symbol){
@@ -80,14 +80,6 @@ void infix_to_postfix(){
 		
 	postfix[p]='\0';
 }
-
-
-
-
-
-
-
-
 
 int main(void){
 	printf("Enter the infix expression");
