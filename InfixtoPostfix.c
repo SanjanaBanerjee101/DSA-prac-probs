@@ -7,6 +7,7 @@ char postfix[MAX];
 int top=-1;
 char stack[MAX];
 
+//to push an item in the stack
 void push(char item){
 	if(top==MAX-1){
 		printf("Stack Overflow");
