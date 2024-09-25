@@ -5,6 +5,7 @@
 	int stack[Max];
 	int top=-1,n,item;
 
+//to enter items into the stack
 void push(int item){
 	if(top==Max-1){
 		printf("Stack Overflow\n");
@@ -13,6 +14,7 @@ void push(int item){
 	stack[top++]=item;
 }
 
+//to delete items from the stack
 void pop(int item){
 	if(top==-1){
 		printf("Stack Underflow\n");
@@ -23,6 +25,7 @@ void pop(int item){
 	printf("\nDeleted item is %d",item);
 }
 
+//to display items in the stack
 void display(){
 	if(top==-1){
 		printf("Stack is Empty\n");
