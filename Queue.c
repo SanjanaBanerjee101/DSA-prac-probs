@@ -1,7 +1,7 @@
 #include <stdio.h>
 # define SIZE 100
 
-void dequeue();
+
 void show();
 int inp_arr[SIZE];
 int Rear = - 1;
@@ -24,6 +24,19 @@ void enqueue()
     }
 } 
 
+void dequeue()
+{
+    if (Front == - 1 || Front > Rear)
+    {
+        printf("Underflow \n");
+        return ;
+    }
+    else
+    {
+        printf("Element deleted from the Queue: %d\n", inp_arr[Front]);
+        Front = Front + 1;
+    }
+} 
 
 int main()
 {
@@ -57,19 +70,7 @@ int main()
  
 
  
-void dequeue()
-{
-    if (Front == - 1 || Front > Rear)
-    {
-        printf("Underflow \n");
-        return ;
-    }
-    else
-    {
-        printf("Element deleted from the Queue: %d\n", inp_arr[Front]);
-        Front = Front + 1;
-    }
-} 
+
  
 void show()
 {
