@@ -1,12 +1,31 @@
 #include <stdio.h>
 # define SIZE 100
-void enqueue();
+
 void dequeue();
 void show();
 int inp_arr[SIZE];
 int Rear = - 1;
 int Front = - 1;
-main()
+
+void enqueue()
+{
+    int insert_item;
+    if (Rear == SIZE - 1)
+       printf("Overflow \n");
+    else
+    {
+        if (Front == - 1)
+      
+        Front = 0;
+        printf("Element to be inserted in the Queue\n : ");
+        scanf("%d", &insert_item);
+        Rear = Rear + 1;
+        inp_arr[Rear] = insert_item;
+    }
+} 
+
+
+int main()
 {
     int ch;
     while (1)
@@ -36,22 +55,7 @@ main()
     } 
 } 
  
-void enqueue()
-{
-    int insert_item;
-    if (Rear == SIZE - 1)
-       printf("Overflow \n");
-    else
-    {
-        if (Front == - 1)
-      
-        Front = 0;
-        printf("Element to be inserted in the Queue\n : ");
-        scanf("%d", &insert_item);
-        Rear = Rear + 1;
-        inp_arr[Rear] = insert_item;
-    }
-} 
+
  
 void dequeue()
 {
