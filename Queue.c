@@ -1,8 +1,6 @@
 #include <stdio.h>
 # define SIZE 100
 
-
-void show();
 int inp_arr[SIZE];
 int Rear = - 1;
 int Front = - 1;
@@ -38,6 +36,20 @@ void dequeue()
     }
 } 
 
+void show()
+{
+    
+    if (Front == - 1)
+        printf("Empty Queue \n");
+    else
+    {
+        printf("Queue: \n");
+        for (int i = Front; i <= Rear; i++)
+            printf("%d ", inp_arr[i]);
+        printf("\n");
+    }
+}
+
 int main()
 {
     int ch;
@@ -67,21 +79,3 @@ int main()
         } 
     } 
 } 
- 
-
- 
-
- 
-void show()
-{
-    
-    if (Front == - 1)
-        printf("Empty Queue \n");
-    else
-    {
-        printf("Queue: \n");
-        for (int i = Front; i <= Rear; i++)
-            printf("%d ", inp_arr[i]);
-        printf("\n");
-    }
-}
